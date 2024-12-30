@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --font-epilogue: "Epilogue", sans-serif;
+  }
+  html {
+    font-family: var(--font-epilogue);
+    scroll-behavior: smooth;
+  }
+
+  
+antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+@layer base {
+    :root{
+        --primary-btn-bg:#EF6D58;
+        --secondary-btn-bg:#FFFFFF;
+        --primary-btn-text:#FFFFFF;
+        --secondary-btn-text:#391400;
+        
+    }
+    .dark{
+        --primary-btn-bg:#B550F8;
+        --secondary-btn-bg:#FFFFFF;
+        --primary-btn-text:#FFFFFF;
+        --secondary-btn-text:#391400;
+    }
+  h1 {
+    @apply text-[72px] leading-[5rem] tracking-[-0.125rem]
+  }
+  h2{
+    @apply text-[3.5rem] leading-[4] tracking-[-0.063rem]
+  }
+  h3{
+    @apply text-[2.5rem] leading-[3rem]
+  }
+  h4{
+    @apply text-[1.5rem] leading-[2rem] 
+  }
+  h5{
+    @apply text-[1rem] leading-[2rem] tracking-[0.188rem]
+  }
+}
+
+@layer components{
+  /* container */
+  .container{
+    @apply px-[1.438rem] sm:px-[8.438rem] py-[1rem]
+  }
+    /* text style */
+    .label{
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: bold
+    }
+
+    .text_big{
+        font-size: 1.25rem;
+        line-height: 2rem;
+        @apply text-dark;
+    }
+    .text_normal{
+        font-size: 1rem;
+        line-height: 2rem;
+        @apply text-dark;
+
+    }
+    .text_gray{
+        font-size: 1rem;
+        line-height: 2rem;
+        opacity: 0.64;
+        @apply text-dark_gray;
+    }
+
+    .text_small{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        opacity: 0.64;
+        @apply text-dark_gray;
+    }
+/* btn styles */
+    .btn{
+        text-transform: uppercase;
+        font-size: .875rem;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 6px;
+    }
+}
+
+
