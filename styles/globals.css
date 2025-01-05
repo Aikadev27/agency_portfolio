@@ -2,94 +2,154 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-    --font-epilogue: "Epilogue", sans-serif;
-  }
-  html {
-    font-family: var(--font-epilogue);
-    scroll-behavior: smooth;
-  }
+  --font-epilogue: "Epilogue", sans-serif;
+}
+html {
+  font-family: var(--font-epilogue);
+  scroll-behavior: smooth;
+}
 
-  
 antialiased {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 @layer base {
-    :root{
-        --primary-btn-bg:#EF6D58;
-        --secondary-btn-bg:#FFFFFF;
-        --primary-btn-text:#FFFFFF;
-        --secondary-btn-text:#391400;
-        
-    }
-    .dark{
-        --primary-btn-bg:#B550F8;
-        --secondary-btn-bg:#FFFFFF;
-        --primary-btn-text:#FFFFFF;
-        --secondary-btn-text:#391400;
-    }
+  :root {
+    --primary-btn-bg: #ef6d58;
+    --secondary-btn-bg: #ffffff;
+    --primary-btn-text: #ffffff;
+    --secondary-btn-text: #391400;
+  }
+  .dark {
+    --primary-btn-bg: #b550f8;
+    --secondary-btn-bg: #ffffff;
+    --primary-btn-text: #ffffff;
+    --secondary-btn-text: #391400;
+  }
   h1 {
-    @apply text-[72px] leading-[5rem] tracking-[-0.125rem]
+    @apply text-[72px] leading-[5rem] tracking-[-0.125rem];
   }
-  h2{
-    @apply text-[3.5rem] leading-[4] tracking-[-0.063rem]
+  h2 {
+    @apply text-[3.5rem] leading-[4rem] tracking-[-0.063rem];
   }
-  h3{
-    @apply text-[2.5rem] leading-[3rem]
+  h3 {
+    @apply text-[2.5rem] leading-[3rem];
   }
-  h4{
-    @apply text-[1.5rem] leading-[2rem] 
+  h4 {
+    @apply text-[1.5rem] leading-[2rem];
   }
-  h5{
-    @apply text-[1rem] leading-[2rem] tracking-[0.188rem]
+  h5 {
+    @apply text-[1rem] leading-[2rem] tracking-[0.188rem];
   }
 }
 
-@layer components{
+@layer components {
   /* container */
-  .container{
-    @apply px-[1.438rem] sm:px-[8.438rem] py-[1rem]
+  .layout_padding {
+    @apply px-[1.438rem] sm:px-[8.438rem] py-[.5rem];
   }
-    /* text style */
-    .label{
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        font-weight: bold
-    }
+  /* text style */
+  .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
-    .text_big{
-        font-size: 1.25rem;
-        line-height: 2rem;
-        @apply text-dark;
-    }
-    .text_normal{
-        font-size: 1rem;
-        line-height: 2rem;
-        @apply text-dark;
+  .text_big {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    @apply text-dark;
+  }
+  .text_normal {
+    font-size: 1rem;
+    line-height: 2rem;
+    @apply text-dark;
+  }
+  .text_gray {
+    font-size: 1rem;
+    line-height: 2rem;
+    opacity: 0.64;
+    @apply text-dark_gray;
+  }
 
-    }
-    .text_gray{
-        font-size: 1rem;
-        line-height: 2rem;
-        opacity: 0.64;
-        @apply text-dark_gray;
-    }
+  .text_small {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    opacity: 0.64;
+    @apply text-dark_gray;
+  }
+  /* btn styles */
+  .btn_big {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 3rem;
+    min-height: 2rem;
+    padding: 0.75rem 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+    z-index: 1;
+  }
+  .btn_big::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #007ea7 0%, #003249 100%);
+    z-index: -1;
+    transition: left 0.2s ease;
+  }
+  .btn_big:hover::before {
+    left: 0;
+  }
+  .btn_big:hover {
+    @apply text-light_accent;
+  }
+  .btn_border {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
 
-    .text_small{
-        font-size: 0.875rem;
-        line-height: 1.5rem;
-        opacity: 0.64;
-        @apply text-dark_gray;
-    }
-/* btn styles */
-    .btn{
-        text-transform: uppercase;
-        font-size: .875rem;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 6px;
-    }
+  /* text link style */
+
+  .text_link {
+    position: relative;
+  }
+  .text_link:hover {
+    @apply text-light_accent;
+    transition: 0.3s all;
+  }
+  .text_link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 1px;
+    background-color: #cc2936;
+    transition: 0.3s;
+  }
+
+  .text_link:hover::before {
+    width: 100%;
+  }
+  .text_link::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 0%;
+    height: 1px;
+    background-color: #ebbab9;
+    transition: 0.3s;
+  }
+
+  .text_link:hover::after {
+    width: 100%;
+  }
 }
-
-

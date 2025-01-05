@@ -5,6 +5,12 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./layouts/**/*.{js,ts,jsx,tsx,mdx}", // Nếu MainLayout nằm trong thư mục layouts
+  ],
+  safelist: [
+    {
+      pattern: /bg-\[.*\]/,
+    },
   ],
   theme: {
     extend: {
@@ -20,6 +26,11 @@ export default {
         'secondary_btn_bg': 'var(--secondary-btn-bg)',
         'primary_btn_text': 'var(--primary-btn-text)',
         'secondary_btn_text': 'var(--secondary-btn-text)',
+        'primary_section_bg': '#28293E',
+        'secondary_section_bg': '#fdf0e9',
+        'secondary_section_border': '#F3D1BF',
+        'clr_responsive_panel': '#04052e',
+        'clr_primary_purple': '#B550F6',
       },
     },
   },

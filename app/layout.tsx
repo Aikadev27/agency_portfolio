@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
 import "../styles/globals.css";
+import MainLayout from "@/layouts/MainLayout";
 
 const epilogue = Epilogue({
   variable: "--font-epilogue", // Biến CSS để dễ sử dụng,
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${epilogue.variable} antialiased `}>{children}</body>
+      <body className={`${epilogue.variable} antialiased `}>
+        <MainLayout>{children}</MainLayout>
+      </body>
     </html>
   );
 }
