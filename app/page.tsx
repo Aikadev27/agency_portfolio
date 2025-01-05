@@ -1,3 +1,4 @@
+"use client";
 import Brands from "@/components/branding/Brands";
 import HeadHero from "@/components/sections/HeadHero";
 import HomeAbout from "@/components/sections/HomeAbout";
