@@ -1,11 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import FacebooIcon from "@/assets/svg/logo/facebook.svg";
-import InstagramIcon from "@/assets/svg/logo/instagram.svg";
-import TwitterIcon from "@/assets/svg/logo/twitter.svg";
 import Image from "next/image";
-import path from "path";
 function FooterNavigation() {
   const menuNavItems = [
     { label: "about", path: "/about" },
@@ -62,13 +58,23 @@ function FooterNavigation() {
       {/* social icons */}
       <ul className="flex items-center gap-2 cursor-pointer ">
         <li className="flex items-center justify-center w-12 h-12 p-2 rounded-full hover:bg-primary_section_bg bg-light_accent">
-          <Image src={FacebooIcon} alt="facebook icon" />
+          <Image
+            src="facebook.svg"
+            width={12}
+            height={12}
+            alt="facebook icon"
+          />
         </li>
         <li className="flex items-center justify-center w-12 h-12 p-2 rounded-full hover:bg-primary_section_bg bg-light_accent">
-          <Image src={TwitterIcon} alt="twitter icon" />
+          <Image src="/twitter.svg" width={12} height={12} alt="twitter icon" />
         </li>
         <li className="flex items-center justify-center w-12 h-12 p-2 rounded-full hover:bg-primary_section_bg bg-light_accent">
-          <Image src={InstagramIcon} alt="instagram icon" />
+          <Image
+            src="instagram.svg"
+            width={12}
+            height={12}
+            alt="instagram icon"
+          />
         </li>
       </ul>
     </div>

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Logo from "@/assets/svg/logo/logo.svg";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -20,7 +19,7 @@ function Header() {
         className="flex items-center gap-2 cursor-pointer"
         onClick={() => router.push("/")}
       >
-        <Image src={Logo} alt="Logo" width={48} height={48} />
+        <Image src="logo.svg" alt="Logo" width={48} height={48} />
         <h4 className="font-bold text-light">Agency</h4>
       </div>
       <ul className="items-center justify-around hidden basis-1/2 text-light sm:flex">

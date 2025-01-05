@@ -7,11 +7,7 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./layouts/**/*.{js,ts,jsx,tsx,mdx}", // Nếu MainLayout nằm trong thư mục layouts
   ],
-  safelist: [
-    {
-      pattern: /bg-\[.*\]/,
-    },
-  ],
+
   theme: {
     extend: {
 
