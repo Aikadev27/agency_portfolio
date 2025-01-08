@@ -27,6 +27,7 @@ export default {
         'secondary_section_border': '#F3D1BF',
         'clr_responsive_panel': '#04052e',
         'clr_primary_purple': '#B550F6',
+
       },
     },
   },

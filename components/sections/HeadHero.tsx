@@ -20,7 +20,7 @@ function HeadHero() {
           <h5 className="uppercase text-light_accent">modern studio</h5>
           <div>
             <h2 className="hidden font-extrabold text-white sm:block">
-              We're Help <br /> To Build Your Dream Project
+              We're Help <br /> To Build Your <br /> Dream Project
             </h2>
             <h3 className="block font-extrabold text-white sm:hidden">
               We're Help <br /> To Build Your Dream Project
@@ -51,6 +51,7 @@ function HeadHero() {
             bitmapImg={BitmapImg}
             text="Put themselves in the merchant's shoes"
             company="Meta Inc"
+            theme="light"
           />
         </div>
       </div>

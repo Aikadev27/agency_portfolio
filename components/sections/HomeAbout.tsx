@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Typography from "../contentLayouts/Typography";
-import HomeAbotImg from "@/assets/images/hero_images/home-about.png";
+import HomeAboutImg from "@/assets/images/hero_images/home-about.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -10,7 +10,7 @@ function HomeAbout() {
   return (
     <div className="flex flex-col items-center gap-6 sm:gap-0 sm:flex-row ">
       <div className="flex-1">
-        <Image src={HomeAbotImg} alt="home-about" className="object-cover" />
+        <Image src={HomeAboutImg} alt="home-about" className="object-cover" />
       </div>
       <div className="flex-1 sm:px-24">
         <Typography

@@ -4,6 +4,7 @@
 :root {
   --font-epilogue: "Epilogue", sans-serif;
 }
+
 html {
   font-family: var(--font-epilogue);
   scroll-behavior: smooth;
@@ -20,12 +21,18 @@ antialiased {
     --secondary-btn-bg: #ffffff;
     --primary-btn-text: #ffffff;
     --secondary-btn-text: #391400;
+    --text_bitmap: ##ffffff;
+  }
+  ::selection {
+    background-color: #000000; /* Màu nền khi quét */
+    color: #ffffff; /* Màu chữ khi quét */
   }
   .dark {
     --primary-btn-bg: #b550f8;
     --secondary-btn-bg: #ffffff;
     --primary-btn-text: #ffffff;
     --secondary-btn-text: #391400;
+    --text_bitmap: #391400;
   }
   h1 {
     @apply text-[72px] leading-[5rem] tracking-[-0.125rem];
@@ -151,5 +158,13 @@ antialiased {
 
   .text_link:hover::after {
     width: 100%;
+  }
+  .text_bitmap_light {
+    color: #ffffff;
+    opacity: 0.64;
+  }
+  .text_bitmap_dark {
+    color: #391400;
+    opacity: 0.64;
   }
 }

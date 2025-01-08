@@ -12,16 +12,22 @@ function Bitmap({
   color,
   text,
   company,
+  theme,
 }: {
   bitmapImg: StaticImageData;
   color?: string;
   text: string;
   company: string;
+  theme: string;
 }) {
   const colorVariants: { [key: string]: string } = {
     purple: "bg-clr_primary_purple",
     yellow: "bg-[#F7CC47]",
     orange: "bg-[#EF6D58]",
+  };
+  const textTheme: { [key: string]: string } = {
+    light: "text_gray text-light_gray",
+    dark: "text-dark text_gray",
   };
 
   return (
@@ -40,10 +46,18 @@ function Bitmap({
         />
       </div>
       <div className="flex-1">
-        <p className="text_gray text-light_gray text-wrap max-w-[12.5em] sm:max-w-full">
+        <p
+          className={`text-wrap  max-w-full ${
+            textTheme[theme || "light"]
+          } mb-4`}
+        >
           '{text}'
         </p>
-        <p className="text-light">{company}.</p>
+        <p
+          className={`${theme === "light" ? " text-light_gray" : "text-dark"}`}
+        >
+          {company}.
+        </p>
       </div>
     </div>
   );

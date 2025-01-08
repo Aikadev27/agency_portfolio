@@ -12,7 +12,7 @@ function FooterInfo() {
           Copyright © 2022 Laaqiq. All Rights Reserved.
         </p>
       </div>
-      <ul className="flex justify-between sm:justify-start sm:gap-14 ">
+      <ul className="flex items-center justify-between sm:justify-start sm:gap-14">
         <li
           className="capitalize cursor-pointer hover:text-light_accent text-dark"
           onClick={() => router.push("/")}
